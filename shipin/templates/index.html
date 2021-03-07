@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  {% load static %}
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>免费电影</title>
+  <link rel="stylesheet" href="{%  static 'css/style.css' %}">
+  <link rel="stylesheet" href="{%  static 'css/bootstrap.min.css' %}">
+  <style type="text/css">
+  body { background: #000; margin: 0; padding:0; }
+  canvas {position: fixed; z-index: -1}
+  </style>
+    <script type="text/javascript" src="{%  static 'js/jquery.min.js' %}"></script>
+  <style type="text/css">
+  #cloudtag {position:relative; width:260px; height:260px; solid #000; margin: 20px auto 0;}
+  #cloudtag a {position:absolute; top:0px; left:0px; color:#00FF00; font-weight:bold; text-decoration:none; padding: 3px 6px; }
+  #cloudtag a:hover {border: 1px solid #eee; background: #000; color:red;}
+  </style>
+  <!-- 来源网站 http://cblog.xyz/ -->
+</head>
+
+<body style="">
+  <canvas id="canvas" width=100% height=100%></canvas>
+
+  <div class="container transparent">
+    <div class="box">
+      <div class="col-lg-10">
+<li><center><h2><font color="red"> 免费电影，我们确保每日更新</font></h2></center>
+</p>
+</li>
+		<div id="bd" class="wrp clear-fix">
+		<div id="main">
+<!-- start  循环  -->
+<center><video wideth="200" height="420" id="myVideo" controls> bai<source src="/static/media/{{ dy }}.mp4"> <source src="movie/kiso.ogg"> <p>请在支持duvideo标签的zhi浏览器dao中播zhuan放shu</p> </video></center>
+</div>           
+<!-- end  循环  -->
+          <div id="category-title">
+            <ul>
+<center>
+              <li class="cat-item"><a href="/?syg={{dy}}">上一个视频</a>
+              </li>
+              <li class="cat-item"><a href="#">今日已更新</a>
+              </li>
+              <li class="cat-item"><a href="#">全部{{quanbu}}部</a>
+              </li>
+              <li class="cat-item"><a href="#">当前第{{dy}}部</a>
+              </li>
+              <li class="cat-item"><a href="/">刷新随机跳</a>
+              </li>
+              <li class="cat-item"><a href="#">每日更新</a>
+              </li>
+              <li class="cat-item"><a href="/?xyg={{dy}}">下一个视频</a>
+              </li>
+</center>
+            </ul>
+		 </div>
+</div>
+</div>
+<!--
+<div class="col-lg-3">
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+  <h2 class="obvious-color"><font color="red">超链接网址</font></h2>
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="heading">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#" aria-expanded="true" aria-controls="collapse">
+          </a>
+        </h4>
+      </div>
+      <div id="collapse" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading">
+        <div class="panel-body">
+<p> <a href="http://jd.com" target="_blank">jd.com</a></p>
+<p> <a href="http://baidu.com" target="_blank">baidu.com</a></p>
+<p> <a href="http://taobao.com" target="_blank">taobao.com</a></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+      </div>-->
+      <div id="collapse" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading">
+        <div class="panel-body">
+{% for i in hqbd %}
+
+          <p>{{i}}</p>
+
+{% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+</div>
+</div>
+</br>
+</br>
+<div class="row">
+  <div class="col-md-5 col-md-offset-3"><center><h2>@copyright: 男人的快乐就是这么简单</h2></center></div>
+</div>
+
+<script type="text/javascript" src="{%  static 'js/django.js' %}"></script>
+<script type="text/javascript" src="{%  static 'js/base.js' %}"></script>
+<script type="text/javascript" src="{%  static 'js/canvas-background.js' %}"></script>
+<script type="text/javascript" src="{%  static 'js/jquery.windstagball.js' %}"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  $("#cloudtag").windstagball({
+    radius:120,
+    speed:10
+  });
+});
+</script>
+</body></html>
